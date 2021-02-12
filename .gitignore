@@ -1,11 +1,7 @@
-.git/*
-.idea/*
-data/*
-metastore_db
-spark-warehouse
+.git
+.idea
 target
-neo_spark.iml
+data
 
+spark-warehouse
 .DS_Store
-derby.log
-NingSparkProject.iml
