@@ -1,7 +1,6 @@
 package com.huangning.scala.lesson.actor
 
 import akka.actor.{Actor, ActorRef}
-
 import scala.io.StdIn
 
 class TonyActor(actorRef: ActorRef) extends Actor {
