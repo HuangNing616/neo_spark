@@ -7,7 +7,7 @@ package com.huangning.scala.lesson.base
  */
 
 // 如果pname前面写val/var，就相当于公有的，在object外部可以用，而不加val/var就相当于私有的
-class Person(pname:String, page: Int){
+class ObjectClass(pname:String, page: Int){
 
   // 私有成员变量在class外部不能访问
   private val name = pname
@@ -37,14 +37,14 @@ class Person(pname:String, page: Int){
   }
 
   def sayObjectName(): String = {
-    Lesson_ObjectAndClass.name
+    ObjectClass.name
   }
 
   println("======= 当Person类的对象创建的时候方法以外（除了构造方法）的语句都执行 =======")
 
 }
 
-object Lesson_ObjectAndClass {
+object ObjectClass {
 
   val name = "wangwu"
   println("++++ object中的所有语句都会被加载 +++++++")
@@ -59,9 +59,9 @@ object Lesson_ObjectAndClass {
 
   def main(args: Array[String]): Unit = {
 
-    val p = new Person("zhangsan", 20)
-    val p1 = new Person("diaochan", 18, 'F')
-    val p2 = new Person("houyi", 19, 'F', "0001")
+    val p = new ObjectClass("zhangsan", 20)
+    val p1 = new ObjectClass("diaochan", 18, 'F')
+    val p2 = new ObjectClass("houyi", 19, 'F', "0001")
     println("Person的第一位成员姓名：" + p.sayName() + " 性别：" + p.gender + " 年龄：" + p.age)
     println("Person的第二位成员姓名：" + p1.sayName() + " 性别：" + p1.gender+ " 年龄：" + p1.age )
     println("Person的第三位成员姓名：" + p2.sayName() + " 性别：" + p1.gender+ " 年龄：" + p2.age )
@@ -77,7 +77,7 @@ object Lesson_ObjectAndClass {
     println("Lesson_Base 中成员变量的name：" + p.sayObjectName())
 
     // object 不可以传参数，如果非要传参数，就会调用相应参数长度的apply方法
-    Lesson_ObjectAndClass(100)
-    Lesson_ObjectAndClass(1000, 200)
+    ObjectClass(100)
+    ObjectClass(1000, 200)
   }
 }

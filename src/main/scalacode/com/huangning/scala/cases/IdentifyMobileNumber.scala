@@ -1,6 +1,6 @@
 package com.huangning.scala.cases
 
-object identifyMobileNumber {
+object IdentifyMobileNumber {
 
     def isInGoodNumber(s: String): String ={
 

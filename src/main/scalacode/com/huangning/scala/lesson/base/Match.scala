@@ -3,15 +3,14 @@ package com.huangning.scala.lesson.base
 /**
  * Author: 黄宁
  * Date: 2020/06/27
- * Target: 了解match（模式匹配）的基本语法
- * Match 模式匹配
+ * Target: 模式匹配的基本语法
  * 1. match不仅可以匹配值还可以匹配类型
  * 2. 从上往下匹配，匹配上之后自动终止
  * 3. 模式匹配外部的{...}可以省略掉
  * 4. case _ 可以匹配任何情况（相当于java的default)，一般用在都匹配不上的时候，一定放在最后！！！
  * 5. 匹配过程中会有数值的转换，比如1.0转换成1来和相应项进行匹配
  */
-object Lesson_Match {
+object Match {
 
   def main(args: Array[String]): Unit = {
     val tp: (Int, Char, Double, String, Char, Boolean, Null) = (1, 'd', 2.0, "abc", 'c', true, null)

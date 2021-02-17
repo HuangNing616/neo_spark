@@ -7,7 +7,7 @@ import java.util.Date
  * Date: 2020/06/20
  * Target: 了解函数与方法
  */
-object Lesson_Method {
+object Method {
 
   /**
    *  1. 方法定义

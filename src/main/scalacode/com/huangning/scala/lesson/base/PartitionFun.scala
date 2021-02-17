@@ -9,17 +9,18 @@ package com.huangning.scala.lesson.base
  * 2. 偏函数只能匹配一个值，匹配上了返回某个值
  * 3. PartialFunction[A, B] A是匹配的类型，B是匹配上返回的类型
  */
-object Lesson_PartitionFun {
+object PartitionFun {
 
-  // 定义偏函数
+  def main(args: Array[String]): Unit = {
+
+    // 偏函数调用
+    val result: Int = MyTest("abc")
+    println(result)
+  }
+
   def MyTest: PartialFunction[String, Int] = {
     case "abc" => 2
     case "a" => 1
     case _ => 200
-  }
-
-  def main(args: Array[String]): Unit = {
-    val result: Int = MyTest("abc")
-    println(result)
   }
 }
